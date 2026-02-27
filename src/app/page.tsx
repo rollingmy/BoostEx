@@ -106,7 +106,7 @@ export default function Home() {
                                             <YAxis stroke="#9CA3AF" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(val) => val >= 1000 ? `${(val / 1000).toFixed(1)}k` : val} />
                                             <Tooltip
                                                 contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-                                                formatter={(value: number) => [value.toLocaleString(), 'Users']}
+                                                formatter={(value: any) => [value?.toLocaleString(), 'Users']}
                                             />
                                             <Line type="monotone" dataKey="users" stroke="#4F46E5" strokeWidth={3} dot={{ strokeWidth: 2, r: 4, fill: '#fff' }} activeDot={{ r: 6, stroke: '#4F46E5', strokeWidth: 2, fill: '#fff' }} />
                                         </LineChart>
